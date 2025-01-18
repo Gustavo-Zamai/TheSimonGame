@@ -34,6 +34,7 @@ body {
 
 .yellow {
     background-color: yellow;
+    opacity: 0.8;
     border: 10px solid black;
     border-radius: 5rem;
     cursor: pointer;
@@ -41,8 +42,10 @@ body {
     height: 20rem;
 }
 
+
 .blue {
     background-color: blue;
+    opacity: 0.8;
     border: 10px solid black;
     border-radius: 5rem;
     cursor: pointer;
@@ -52,6 +55,7 @@ body {
 
 .green {
     background-color: green;
+    opacity: 0.8;
     border: 10px solid black;
     border-radius: 5rem;
     cursor: pointer;
@@ -61,11 +65,16 @@ body {
 
 .red {
     background-color: red;
+    opacity: 0.8;
     border: 10px solid black;
     border-radius: 5rem;
     cursor: pointer;
     width: 20rem;
     height: 20rem;
+}
+
+.active {
+    opacity:1;
 }
 
 footer {
