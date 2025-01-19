@@ -33,7 +33,6 @@ body {
 
  
 .btn {
-    opacity: 0.8;
     border: 10px solid black;
     border-radius: 5rem;
     cursor: pointer;
@@ -56,10 +55,6 @@ body {
 
 .red {
     background-color: red;
-}
-
-.active {
-    opacity:1;
 }
 
 footer {
