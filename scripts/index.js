@@ -1,29 +1,34 @@
-function generateRandomNumber() {
-    return Math.floor((Math.random() * 4) + 1);
-}
+var btnsColours = ["green", "red", "yellow", "blue"];
 
-function pickASquare() {
-    var randomNumber = generateRandomNumber();
-    var selectedSquare = $("button." + randomNumber);
+var gameSequence = [];
 
-    selectedSquare.addClass("active");
+var userSequence = [];
 
-    setTimeout(() => {
-        selectedSquare.removeClass("active");
-    }, 200);
-}
+$(".btn").click(function() {
+    var userChosenColour = $(this).attr("id");
 
-$("body").on("keydown", function (e) {
-    console.log(e);
-    pickASquare();
+    userSequence.push(userChosenColour);
+
+    console.log(userSequence);
 });
 
-var clickedSquare = $("button").on("click", function clicked(e) {
-    console.log(e)
-    clickedSquare.addClass("active");
 
-    setTimeout(() => {
-        clickedSquare.removeClass("active");
-    }, 200);    
 
-})
+
+function sequence() {
+    var randomNumber = Math.floor(Math.random() * 4);
+
+    var randomChosenColour = btnsColours[randomNumber];
+
+    gameSequence.push(randomChosenColour);
+    console.log(randomChosenColour);
+
+
+    $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
+
+    var audio = new Audio("/assets/sounds/" + randomChosenColour + ".mp3");
+    audio.play();
+}
+
+
+sequence();
